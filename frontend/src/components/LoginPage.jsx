@@ -132,26 +132,7 @@ export const LoginPage = ({ onOpenGuide }) => {
       {/* RIGHT COLUMN: Clean White Login Form (50% Width) */}
       <div className="lg:w-1/2 bg-white p-8 sm:p-12 lg:p-16 flex flex-col justify-between relative text-left text-slate-900 min-h-screen">
 
-        {/* Top Right Actions */}
-        <div className="flex items-center justify-end gap-4 z-10">
-          <button
-            onClick={toggleMockMode}
-            className={`px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 border transition-all ${isMockMode
-              ? "bg-amber-100 text-amber-800 border-amber-300"
-              : "bg-emerald-100 text-emerald-800 border-emerald-300"
-              }`}
-          >
-            <Cpu className="w-3.5 h-3.5" />
-            <span>{isMockMode ? "Demo mode" : "Live mode"}</span>
-          </button>
 
-          <button
-            onClick={onOpenGuide}
-            className="text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            Azure setup guide
-          </button>
-        </div>
 
         {/* Form Container */}
         <div className="my-auto py-8 max-w-md w-full mx-auto space-y-6">
@@ -177,7 +158,7 @@ export const LoginPage = ({ onOpenGuide }) => {
               <input
                 type="email"
                 required
-                placeholder="superadmin@platform.com"
+                placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-white border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-colors shadow-sm"
@@ -195,7 +176,7 @@ export const LoginPage = ({ onOpenGuide }) => {
               <input
                 type="password"
                 required
-                placeholder="••••••••••••"
+                placeholder="Your Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full bg-white border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-colors shadow-sm"
